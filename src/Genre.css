@@ -1,0 +1,118 @@
+.genrebtn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+ 
+  }
+
+
+  button
+{
+    font-style: italic;
+    padding:3px 18px;
+    background: none;
+    outline: none;
+    border: none;
+    color:rgb(113, 32, 3);
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    text-transform: uppercase;
+    width: fit-content;
+} 
+
+button:hover
+{
+    box-shadow: 2px 1px 2px  rgb(85, 27, 27);
+}
+
+button:active
+{
+    color: blueviolet;
+    border-radius: 5px;
+} 
+
+@media screen and (max-width:750px) {
+    .genrebtn {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-content: center;
+        align-items: center;
+       
+     
+      }
+
+      button
+      {
+        font-size: 17px;
+      }
+    
+}
+
+@media screen and (max-width:650px) {
+  .genrebtn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+   
+ 
+  }  
+  button
+    {
+      padding: 5px;
+      margin: auto;
+      margin-left: auto;
+      font-size: 11px;
+    }
+}
+
+@media screen and (max-width:450px) {
+  .genrebtn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+      button
+    {
+      padding: 13px;
+      margin: auto;
+      margin-left: auto;
+      font-size: 12px;
+    }
+    }
+
+    @media screen and (max-width:380px) {
+          button
+          {
+            padding: 8px;
+            margin: auto;
+            margin-left: auto;
+            font-size: 10px;
+          }
+        }
+
+        
+    @media screen and (max-width:283px) {
+        .genrebtn {
+            width: 100%;
+           display: grid;
+           grid-template-columns: repeat(2,1fr);
+           margin: auto;
+          }
+          button
+          {
+            padding: 8px;
+            margin: auto;
+            margin-left: auto;
+            font-size: 10px;
+          }
+        
+    
+        }

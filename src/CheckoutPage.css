@@ -1,0 +1,77 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .checkout h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout h3 {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .checkout div span:first-child {
+    font-weight: bold;
+    width: 50%;
+  }
+  
+  .checkout div span:last-child {
+    text-align: right;
+    width: 50%;
+  }
+  
+  .checkout form {
+    width: 100%;
+  }
+  
+  .checkout form div {
+    margin-bottom: 10px;
+  }
+  
+  .checkout form div label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .checkout form div input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .checkout form button {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .checkout form button:hover {
+    background-color: #0066b2;
+  }
+  

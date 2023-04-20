@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import AddToCart from './AddToCart';
+import Moviecart from './Moviecart';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import SeatReservation from './SeatReservation';
+import CheckoutPage from './CheckoutPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+  <div className="App">
+
+  <BrowserRouter>
+  <Routes>
+  <Route path="/" element={<Moviecart />} />
+  <Route path="BookSeat" element={<SeatReservation />} />
+  <Route path="checkout" element={<CheckoutPage />}/>
+  </Routes>
+  </BrowserRouter>
+
+  </div>
   );
 }
 

@@ -1,0 +1,168 @@
+a
+{
+    text-decoration: none;
+    color: rgb(255, 0, 179);
+}
+
+.allMovieListl
+{
+    background-image: url("https://media.istockphoto.com/id/1235196083/photo/electronic-tropical-storm.jpg?s=612x612&w=0&k=20&c=iPXkwgnNyullWl5CBN4pNxCUsU9B2Nb3owiO6pRFIAQ=");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position:fixed;
+    background-size: cover;
+    
+}
+
+
+.MovBg
+{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+    /* margin-top: -15px; */
+    /* background-color: rgb(31, 32, 35); */
+    width:100%;
+}
+
+@media screen and (max-width:960px) {
+    
+    .MovBg
+    {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+        
+    }    .details h1:nth-child(1) {
+        font-size: 0.8rem;
+      }
+      .details p:nth-child(2) {
+        font-size: 0.6rem;
+      }
+}
+
+ @media screen and (max-width:660px) {
+    
+
+    
+    .cards
+    {
+        width: 71%;
+        margin: auto;
+    }
+   
+    .image_box img
+    {
+        width: 200px;
+        height: 300px;
+        margin: auto;
+    
+    }
+    .details h1:nth-child(1) {
+        font-size: 0.8rem;
+      }
+      .details p:nth-child(2) {
+        font-size: 0.6rem;
+      }
+   
+} 
+
+
+@media screen and (max-width:610px) {
+
+    .MovBg
+    {
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+     
+    }
+    
+    .cards
+    {
+        width: 60%;
+    }
+   
+    .image_box img
+    {
+         width: 100%;
+        height: 380px;
+       
+    
+    }
+}
+
+
+@media screen and (max-width:560px) {
+    
+    
+    .MovBg
+    {
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+     
+    }
+    
+    .cards
+    {
+        width: 60%;
+        margin: auto;
+    }
+    section 
+    {
+        margin-bottom:30% ;
+        margin-top: 20%;
+        width: 100%;
+    }
+   
+    .image_box img
+    {
+        
+        width: 100%;
+        height: 440px;
+        margin: auto;
+    }
+    .details button
+    {
+     margin: 20px auto; 
+    }
+    .details h1:nth-child(1) {
+        font-size: 0.8rem;
+      }
+      .details p:nth-child(2) {
+        font-size: 0.6rem;
+      }
+}
+
+@media screen and (max-width:420px) {
+   
+    .cards
+    {
+        width: 60%;
+        margin: auto;
+    }
+    .image_box img
+    {
+        margin: auto;
+        width: 100%;
+        height: 340px;   
+    } 
+
+}
+
+@media screen and (max-width:300px) {
+
+    .image_box img
+    {
+        margin: auto;
+        width: 170px;
+        height: 300px;
+        
+    }
+
+    section
+    {
+        margin-bottom:30% ;
+    }
+    #searchBar
+    {
+        width: 120px;
+    }
+}
