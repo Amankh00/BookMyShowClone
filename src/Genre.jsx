@@ -14,7 +14,9 @@ const Genre = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https:www.omdbapi.com/?apikey=23d531f5&s=${endpoint}`
+          `https://www.omdbapi.com/?apikey=23d531f5&s=${endpoint}`
+
+
         );
         setData(response.data.Search);
         console.log(response.data);
