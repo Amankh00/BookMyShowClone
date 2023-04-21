@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import NavBar from "./NavBar";
 import "./Moviecart.css"
 import "./NavBar"
+import AboutUs from "./AboutUs"
 
 
 
@@ -131,7 +132,7 @@ return(
               </div>
               </div>
 
-
+<AboutUs/>
 </CartContext.Provider>
 
           </>

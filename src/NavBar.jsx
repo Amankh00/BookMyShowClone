@@ -7,6 +7,7 @@ import { useAuth0 ,} from "@auth0/auth0-react";
 import "./NavBar.css"
 import "./Genre.css"
 
+
 const NavBar = () =>
 {
     const first = useContext(srch);
