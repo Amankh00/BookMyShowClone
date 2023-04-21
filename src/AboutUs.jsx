@@ -14,7 +14,7 @@ const AboutUs = ()=>
         
                     <div className = "content">
                         <h2>About Us</h2>
-                   Book_My_Show
+                   
                         <p>Here you can see different type of Movies List where you can chooese any of them And book Tickets we provide Ticket booking Option also.</p>
                         <ul className = "links">
                             <li><a href = "#">work</a></li>
