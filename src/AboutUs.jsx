@@ -8,7 +8,7 @@ const AboutUs = ()=>
         <>
                 
                 <div id="sec1">
-                  <div className = "image">
+                  <div className = "imag">
                        <img src="https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758__340.png"/>
                     </div>
         

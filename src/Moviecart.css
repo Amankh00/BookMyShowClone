@@ -8,19 +8,10 @@
 .allMovieList
 {
     position: relative;
-    background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-image: url("https://images.unsplash.com/photo-1449156733864-dd5471bb7427?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-/* .MovBg 
-  {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
- */
 
 .rm
 {
@@ -104,10 +95,6 @@ section
 }
 
 
- button:first-child
-{
-    margin-left: 40px;
-}
 
 
 .details button:active
@@ -115,14 +102,16 @@ section
     font-size: 12px;
 }
 
-.loveIcon
+ .loveIcon
 {
     position: absolute;
     top: 30px;
     right: 20px;
     display: flex;
     height: 20px;
-}
+   
+} 
+
 .fa-heart
 {
     font-size: 33px;
@@ -147,7 +136,6 @@ section
    display: none;
   }
 
-  
 
 
 
@@ -180,8 +168,7 @@ section
         
        
     }
-  } */
-  /*
+  } 
    @media (max-width: 780px) {
     .cards {
       width: 150px;
@@ -209,8 +196,8 @@ section
        
     }
 
-  } */
-
+  } 
+*/
   
   
   

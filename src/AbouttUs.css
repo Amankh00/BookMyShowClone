@@ -6,8 +6,6 @@
 body
 {
      font-family: 'Playfair Display', serif; 
-    display: grid;
-  
     align-content: center;
     min-height: 90vh;
 
@@ -23,13 +21,13 @@ body
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 12px
 }
-.image
+.imag
 {
     background-color: #12192c;
     display: flex;
     border-radius: 12px 0 0 12px;
 }
-.image img
+.imag img
 {
 height:50vh;
 margin:50px auto
@@ -122,7 +120,17 @@ margin:50px auto
     cursor: pointer;
 }
 
-
+@media(max-width: 1150px)
+{
+    #sec1
+    {
+        grid-template-columns: 1fr;
+        width: 80%;
+        border-radius: none;
+        margin: 100px auto;
+        
+    }
+}
 
 
 @media(max-width: 900px)
@@ -130,10 +138,12 @@ margin:50px auto
    #sec1
     {
         grid-template-columns: 1fr;
-        width: 100%;
+        width: 80%;
         border-radius: none;
+        margin-left: 70px;
+        margin: 59px auto;
     }
-    .image
+    .imag
     {
         height: 70vh;
         border-radius: none;
@@ -178,11 +188,33 @@ margin:50px auto
     }
 }
 
+@media(max-width: 860px)
+{
+   #sec1
+    {
+        grid-template-columns: 1fr;
+        width: 80%;
+        border-radius: none;
+       
+    }
+}
+
+@media(max-width: 500px)
+{
+   #sec1
+    {
+        grid-template-columns: 1fr;
+        width: 70%;
+        border-radius: none;
+       
+    }
+}
 .rede 
   
 {
     height: 00px;
     background-color: white;
+    
   }
 
  footer
@@ -190,7 +222,6 @@ margin:50px auto
  {
       width: 100%;
       position: absolute;
-      
       background:#202124;
       color: #fff;
       padding: 30px 0 10px;
@@ -327,7 +358,8 @@ margin:50px auto
       footer .col,
       footer 
       {
-        font-size: 14px;
+        font-size: 13px;
+
       }
   }
   @media (orientation: landscape) and (max-height: 500px) 
@@ -335,6 +367,7 @@ margin:50px auto
       footer 
       {
         position: unset;
+    
       }
   }
   

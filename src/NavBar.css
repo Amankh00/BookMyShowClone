@@ -18,7 +18,7 @@
 
 #searchBar
 {
-  width: 510px;
+  width: 460px;
   min-width: 100px;
   border-radius: 7px;
   height: 20px;
@@ -52,7 +52,19 @@
 @media screen and (max-width:1130px) {
   .Loginfo
   {
-    width: 300px;
+    width: 390px;
+  }
+  #searchBar
+  {
+    width:290px
+  }
+}
+
+
+@media screen and (max-width:1060px) {
+  #searchBar
+  {
+    width:280px
   }
 }
 
@@ -63,7 +75,7 @@
   }
   #searchBar
   {
-    width: 388px;
+    width: 320px;
     font-size: medium;
     padding: 2px 35px;
   }
@@ -76,10 +88,11 @@
   }
   #searchBar
   {
-    width: 388px;
+   
     font-size: medium;
     padding: 2px 35px;
   }
+
 }
 
 @media screen and (max-width:800px) {
@@ -90,9 +103,7 @@
 }
 #searchBar
 {
-  min-width:190px;
-  width: 420px;
-
+  width: 220px;
 }
 .logo
 {
@@ -108,7 +119,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+ 
   }
   .Loginfo
   {
@@ -121,7 +132,7 @@
 
   #searchBar
   {
-    width: 188px;
+    width: 360px;
     font-size: medium;
     padding: 2px 35px;
   }
@@ -138,6 +149,12 @@
   marquee
   {
     width: 170px;
+  }
+  #searchBar
+  {
+    width: 200px;
+    font-size: medium;
+    padding: 2px 35px;
   }
 }
 

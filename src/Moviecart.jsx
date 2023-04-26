@@ -5,7 +5,8 @@ import NavBar from "./NavBar";
 import "./Moviecart.css"
 import "./NavBar"
 import AboutUs from "./AboutUs"
-
+import "./AllMovieList.css"
+// import "./Aj.css"
 
 
 

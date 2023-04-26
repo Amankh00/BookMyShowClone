@@ -33,6 +33,18 @@ const Genre = () => {
 
   return(
     <>
+<div className="event">
+  <nav>
+  <ul>
+  <li><button value="Movies"  onClick={handleButtonClick}>Movies</button></li>
+  <li> <button value="Events" onClick={handleButtonClick}>Events</button></li>
+  <li> <button value="Plays" onClick={handleButtonClick}>Plays</button></li>
+  <li> <button value="Sports" onClick={handleButtonClick}>Sports</button></li>
+  <li><button value="Activities" onClick={handleButtonClick}>Activities</button></li>
+  <li> <button value="buzz" onClick={handleButtonClick}>buzz</button></li>
+  </ul>
+  </nav>
+  </div>
 
         <div className="genrebtn">
 
@@ -42,31 +54,31 @@ const Genre = () => {
   <button value="Animation" onClick={handleButtonClick}>Animation</button>
   <button value="Comedy" onClick={handleButtonClick}>Comedy</button>
   <button value="Documentary" onClick={handleButtonClick}>Documentary</button>
-  </div>
+  
 
 
 
-  <div className="genrebtn">
+  
   <button value="Drama" onClick={handleButtonClick}>Drama</button>
   <button value="Family" onClick={handleButtonClick}>Family</button>
   <button value="Fantasy" onClick={handleButtonClick}>Fantasy</button>
   <button value="History" onClick={handleButtonClick}>History</button>
   <button value="Horror" onClick={handleButtonClick}>Horror</button>
-  </div>
 
 
 
-  <div className="genrebtn">
+
+  
   <button value="Mystery" onClick={handleButtonClick}>Mystery</button>
   <button value="Romance" onClick={handleButtonClick}>Romance</button>
   <button value="Science Fiction" onClick={handleButtonClick}>Science Fiction</button>
   <button value="TV Movie" onClick={handleButtonClick}>TV Movie</button>
-  <button value="Thriller" onClick={handleButtonClick}>Thriller</button>
-  </div>
+  <button value="Thriller" onClick={handleButtonClick}>Thriller</button> 
+ 
 
 
 
-  <div className="genrebtn">
+
   <button value="War" onClick={handleButtonClick}>War</button>
   <button value="Western" onClick={handleButtonClick}>Western</button>
 </div>
@@ -91,12 +103,8 @@ const Genre = () => {
          }).map((movie) => (
             <section
                 key={movie.imdbID}
-                style={{
-                height: "500px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
+                style={{width:"fit-content",
+                margin:"5% auto",
               }}
             >
               <div className="cards">
@@ -116,10 +124,11 @@ const Genre = () => {
                 }}
               >
               
-                <h1 style={{color:"red"}}>{movie.Title}</h1>
-                <p>{movie.overview}
+                <h1 style={{color:"red",width:"fit-content"}}>{movie.Title}</h1>
+                {/* <p>{movie.plot} */}
+                <p>
                 this is intresting and oscar winning movie thanks for visiting our site</p>
-                <p>IMDBID = {movie.imdbID}</p>
+                {/* <p>IMDBID = {movie.imdbID}</p> */}
                 <p>{movie.Type}</p>
                 <p style={{ color: "white", textAlign: "center" }}>
                   Release Year: {movie.Year}
