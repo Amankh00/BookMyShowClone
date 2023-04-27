@@ -17,7 +17,7 @@ const AddToCart = () => {
     }
     else
     {
-      alert("Please log in to remove movies to your favorites.")
+      alert("Please log in to remove movies from your favorites.")
     }
   };
 
