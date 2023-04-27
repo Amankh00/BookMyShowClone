@@ -125,3 +125,18 @@ a {
       width: 120px;
     }
   }
+
+  @media screen and (max-width: 300px) {
+    .image_box img {
+      width: 170px;
+      height: 300px;
+    }
+  
+    section {
+      margin-bottom: 30%;
+    }
+  
+    #searchBar {
+      width: 60px;
+    }
+  }

@@ -128,6 +128,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   #searchBar
@@ -157,6 +158,18 @@
     padding: 2px 35px;
   }
 }
+
+@media screen and (max-width:279px) {
+ 
+
+  #searchBar
+  {
+    width: 165px;
+    font-size: medium;
+    padding: 2px 35px;
+  }
+}
+
 
 /*
   .head

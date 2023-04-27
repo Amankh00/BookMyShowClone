@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AddToCart from "./AddToCart";
+import "./AllMovieList.css";
+import "./Moviecart.css"
 import "./Genre.css"
 
 const Genre = () => {
@@ -99,14 +101,15 @@ const Genre = () => {
    <div id="hide" >  <AddToCart />   </div>      
 
 
-   <div className="allMovieList">  
+   <div className="allMovieList"> 
+
 
      <div id="hidy" > <input type="text"placeholder="🔎 Genre Movie Serch here"
      id="searchBar" value={search}  onChange={(e)=>{setSearch(e.target.value)}}/>
      </div>  
        
+     <div className="MovBg">
        
-        <div className="MovBg">
           
           {data && data.filter((value)=>
          {
@@ -122,49 +125,35 @@ const Genre = () => {
        
          }).map((movie) => (
            
-          <section
-                key={movie.imdbID}npm start
-                style={{width:"fit-content",
-                margin:"5% auto",
-              }}
-            >
-              <div className="cards">
-                <div className="image_box">
-                  <img src={movie.Poster} alt={movie.Title} />
-                </div>
-               
+          
 
-              </div>
-              
-              
-               <div
-                  className="details"
-                  style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-              
-                <h1 style={{color:"red",width:"fit-content"}}>{movie.Title}</h1>
-                {/* <p>{movie.plot} */}
-                <p>
-                this is intresting and oscar winning movie thanks for visiting our site</p>
-                {/* <p>IMDBID = {movie.imdbID}</p> */}
-                <p>{movie.Type}</p>
-                <p style={{ color: "white", textAlign: "center" }}>
-                  Release Year: {movie.Year}
-                </p>
-                {/* { <button  style={{ marginLeft: "20px" }}>Add to Favourite</button> } */}
-           
-               <Link to="BookSeat"> <button>BOOK MY TICKET</button></Link>
+          <section  key={movie.imdbID}>
+          <div className="cards">
                
-              </div>
-            </section>
+               <div className="image_box">
+               <img src={movie.Poster} alt={movie.Title} />
+               </div>
+           
+                <div className="details" style={{textAlign:"center", margin:"3px 15px",padding:"5px"}}>
+                
+                     <h1>{movie.Title}</h1>
+                     <p>{movie.overview}</p>
+                     <p>  this is intresting and Good movie thanks for visiting our site</p>
+                     <p>IMDBID = {movie.imdbID}</p> 
+                     <p>Release Year {movie.Year}</p>
+        
+                     <Link to="/BookSeat">  <button >BookShow</button> </Link> 
+                 
+                </div>
+           
+           </div>
+          </section>
+
+
           ))}
         </div>
-</div>
+        </div> 
+
 
     </>
   );
