@@ -1,7 +1,5 @@
-
-
 import React,{useContext} from "react";
-import {srch,setSrch,CartContext} from "./Moviecart";
+import {srch,setSrch} from "./Moviecart";
 import Genre from "./Genre";
 import { useAuth0 ,} from "@auth0/auth0-react";
 import "./NavBar.css"
@@ -15,6 +13,20 @@ const NavBar = () =>
     const { user, isAuthenticated, isLoading } = useAuth0();
     const { loginWithRedirect, logout} = useAuth0();
 
+    const SearchItem = () => {
+
+      const hideDiv = document.getElementById('searchBar');
+         if (hideDiv.value ) 
+         {
+           hideDiv.style.display = 'block';
+         }
+          else
+           {
+           hideDiv.style.display = 'none';
+           }
+};
+
+    
     return(
         <>
        <header>
@@ -29,12 +41,11 @@ const NavBar = () =>
         {/* </marquee>    */}
         </a>
         
-        <input st type="text" name=""  placeholder=
+        <input type="text" name=""  placeholder=
         "🔎 Search for Movies , Events" id="searchBar"
          value={first} onChange={(e)=>{second(e.target.value)}}/>
      
-     
-     
+      
    <div className="Loginfo">
 
       {

@@ -31,9 +31,22 @@ const Genre = () => {
     setEndpoint(event.target.value);
   };
 
+ const toggleC = () => {
+
+    const hideDiv = document.getElementById('hidy');
+       if (hideDiv.style.display === 'none') 
+       {
+         hideDiv.style.display = 'block';
+       }
+        else
+         {
+         hideDiv.style.display = 'none';
+         }
+};
   return(
     <>
-<div className="event">
+
+<div className="event"  onClick={toggleC}>
   <nav>
   <ul>
   <li><button value="Movies"  onClick={handleButtonClick}>Movies</button></li>
@@ -46,7 +59,7 @@ const Genre = () => {
   </nav>
   </div>
 
-        <div className="genrebtn">
+        <div className="genrebtn"  onClick={toggleC}>
 
           
   <button value="Action" onClick={handleButtonClick}>Action</button>
@@ -83,13 +96,19 @@ const Genre = () => {
   <button value="Western" onClick={handleButtonClick}>Western</button>
 </div>
 
-<div id="hide" >
-<AddToCart />
-</div>    
-    <div className="allMovieList">    
+   <div id="hide" >  <AddToCart />   </div>      
 
+
+   <div className="allMovieList">  
+
+     <div id="hidy" > <input type="text"placeholder="🔎 Genre Movie Serch here"
+     id="searchBar" value={search}  onChange={(e)=>{setSearch(e.target.value)}}/>
+     </div>  
+       
+       
         <div className="MovBg">
-          {data &&  data.filter((value)=>
+          
+          {data && data.filter((value)=>
          {
           if(search === "")
           {
@@ -100,9 +119,11 @@ const Genre = () => {
             return value;
           }
        
+       
          }).map((movie) => (
-            <section
-                key={movie.imdbID}
+           
+          <section
+                key={movie.imdbID}npm start
                 style={{width:"fit-content",
                 margin:"5% auto",
               }}
@@ -111,6 +132,8 @@ const Genre = () => {
                 <div className="image_box">
                   <img src={movie.Poster} alt={movie.Title} />
                 </div>
+               
+
               </div>
               
               
@@ -148,5 +171,3 @@ const Genre = () => {
 };
 
 export default Genre;
-
-

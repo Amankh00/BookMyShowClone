@@ -6,7 +6,6 @@ import "./Moviecart.css"
 import "./NavBar"
 import AboutUs from "./AboutUs"
 import "./AllMovieList.css"
-// import "./Aj.css"
 
 
 
@@ -59,6 +58,7 @@ useEffect(() => {
 
 return( 
         <>
+        
 <CartContext.Provider value={cart}>
 <srch.Provider value={search}>
 <setSrch.Provider value={setSearch}>
@@ -76,7 +76,7 @@ return(
             </abbr>
             </span>
             
-             <span id="sp">{cart.length }</span>
+             <span id="sp">{cart.length}</span>
              
        </div>
 
@@ -102,7 +102,7 @@ return(
           {
             return value;
           }
-       
+      
          }).map((movie)=>
             (
              
@@ -114,7 +114,7 @@ return(
                   </div>
               
                    <div className="details">
-                  
+                   
                         <h1>{movie.title}</h1>
                         <p>{movie.overview}</p>
                         <p>Release Date {movie.release_date}</p>
