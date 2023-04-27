@@ -10,23 +10,10 @@ const NavBar = () =>
 {
     const first = useContext(srch);
     const second = useContext(setSrch);
-    const { user, isAuthenticated, isLoading } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
     const { loginWithRedirect, logout} = useAuth0();
 
-    const SearchItem = () => {
-
-      const hideDiv = document.getElementById('searchBar');
-         if (hideDiv.value ) 
-         {
-           hideDiv.style.display = 'block';
-         }
-          else
-           {
-           hideDiv.style.display = 'none';
-           }
-};
-
-    
+      
     return(
         <>
        <header>

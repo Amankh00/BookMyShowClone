@@ -2,14 +2,23 @@ import { useContext } from "react";
 import { CartContext } from "./Moviecart";
 import "./AllMovieList.css";
 import "./Genre.css";
+import { useAuth0 ,} from "@auth0/auth0-react";
 
 const AddToCart = () => {
   const cart = useContext(CartContext);
+  const { isAuthenticated } = useAuth0();
+
 
   const handleRemove = (movie) => {
+    if (isAuthenticated) {
     const newCart = cart.filter((m) => m.id !== movie.id);
     localStorage.setItem("cart", JSON.stringify(newCart));
     window.location.reload();
+    }
+    else
+    {
+      alert("Please log in to remove movies to your favorites.")
+    }
   };
 
   return (
