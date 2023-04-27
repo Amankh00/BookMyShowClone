@@ -90,3 +90,19 @@ const NavBar = () =>
 }
 
 export default NavBar;
+
+
+
+
+// const handleCart = (movie) => {
+//   if (isAuthenticated) {
+//     if (cart.includes(movie)) {
+//       alert("This movie is already added to your favorites.");
+//     } else {
+//       setCart([...cart, movie]);
+//       console.log(cart);
+//     }
+//   } else {
+//     alert("Please log in to add movies to your favorites.");
+//   }
+// };

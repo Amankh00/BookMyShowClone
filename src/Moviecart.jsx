@@ -6,7 +6,7 @@ import "./Moviecart.css"
 import "./NavBar"
 import AboutUs from "./AboutUs"
 import "./AllMovieList.css"
-
+import { useAuth0 ,} from "@auth0/auth0-react";
 
 
 const srch = createContext();
@@ -21,24 +21,39 @@ const Moviecart = ()=>
     const[data,setData]=useState([]);
     const[search,setSearch]= useState("");
     const[cart,setCart]=useState([]);
-
+    const { isAuthenticated } = useAuth0();
 
     const handleCart = (movie) => {
-      setCart([...cart, movie]);
-      console.log(cart);
+      if (isAuthenticated) {
+        if (cart.includes(movie)) {
+          alert("This movie is already added to your favorites.");
+        } else {
+          const newCart = [...cart, movie];
+          setCart(newCart);
+          localStorage.setItem("cart", JSON.stringify(newCart));
+          console.log(newCart);
+        }
+      } else {
+        alert("Please log in to add movies to your favorites.");
+      }
     };
-  
 
-useEffect(() => {
-    const axi = async()=>
-    {
-       const res = await axios.get("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1cf50e6248dc270629e802686245c2c8");
-       setData(res.data.results);
-    }
-
-    axi();
-
-}, []);
+    useEffect(() => {
+      const axi = async () => {
+        const res = await axios.get(
+          "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1cf50e6248dc270629e802686245c2c8"
+        );
+        setData(res.data.results);
+      };
+    
+      axi();
+    
+      const storedCart = localStorage.getItem("cart");
+      if (storedCart) {
+        setCart(JSON.parse(storedCart));
+      }
+    }, []);
+    
 
 
   const toggleCart = () => {
@@ -141,5 +156,3 @@ return(
       }
  export default Moviecart;
 export {srch,setSrch,CartContext };
-
-

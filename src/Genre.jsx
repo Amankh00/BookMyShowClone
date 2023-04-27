@@ -3,14 +3,33 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AddToCart from "./AddToCart";
 import "./AllMovieList.css";
-import "./Moviecart.css"
-import "./Genre.css"
+import "./Moviecart.css";
+import "./Genre.css";
+import { useAuth0 ,} from "@auth0/auth0-react";
+
 
 const Genre = () => {
-
+  
   const [data, setData] = useState([]);
   const [endpoint, setEndpoint] = useState("");
   const [search,setSearch]= useState("");
+  const[cart,setCart]=useState([]);
+
+  const { isAuthenticated } = useAuth0();
+
+  const handleCart = (movie) => {
+    if (isAuthenticated) {
+      if (cart.includes(movie)) {
+        alert("This movie is already added to your favorites.");
+      } else {
+        setCart([...cart, movie]);
+        console.log(cart);
+      }
+    } else {
+      alert("Please log in to add movies to your favorites.");
+    }
+  };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,6 +52,11 @@ const Genre = () => {
     setEndpoint(event.target.value);
   };
 
+
+
+
+
+
  const toggleC = () => {
 
     const hideDiv = document.getElementById('hidy');
@@ -47,6 +71,8 @@ const Genre = () => {
 };
   return(
     <>
+
+
 
 <div className="event"  onClick={toggleC}>
   <nav>
@@ -90,7 +116,6 @@ const Genre = () => {
   <button value="TV Movie" onClick={handleButtonClick}>TV Movie</button>
   <button value="Thriller" onClick={handleButtonClick}>Thriller</button> 
  
-
 
 
 
@@ -143,7 +168,7 @@ const Genre = () => {
                      <p>Release Year {movie.Year}</p>
         
                      <Link to="/BookSeat">  <button >BookShow</button> </Link> 
-                 
+                     <button  onClick={() => handleCart(movie)} id='cartBtn'>Add to Favourite</button>
                 </div>
            
            </div>
