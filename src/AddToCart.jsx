@@ -21,6 +21,18 @@ const AddToCart = () => {
     }
   };
 
+  // const handleRemove = (movie) => {
+  //   if (isAuthenticated) {
+  //     const newCart = cart.filter((m) => m.id !== movie.id);
+  //     setCart(newCart);
+  //     localStorage.setItem("cart", JSON.stringify(newCart));
+  //   } else {
+  //     alert("Please log in to remove movies from your favorites.");
+  //   }
+  // };
+  
+
+
   return (
     <>
       {cart.length === 0 ? (

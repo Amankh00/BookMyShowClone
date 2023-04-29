@@ -25,18 +25,33 @@ const Moviecart = ()=>
 
     const handleCart = (movie) => {
       if (isAuthenticated) {
-        if (cart.includes(movie)) {
+        if (cart.some((m) => m.id === movie.id)) {
           alert("This movie is already added to your favorites.");
         } else {
           const newCart = [...cart, movie];
           setCart(newCart);
           localStorage.setItem("cart", JSON.stringify(newCart));
-          console.log(newCart);
         }
       } else {
         alert("Please log in to add movies to your favorites.");
       }
     };
+    
+    const handleseat = () => 
+    {
+      if (isAuthenticated)
+       {
+        return (
+          <Link to="/BookSeat">
+            <button>BookShow</button>
+          </Link>
+        );
+      } else
+       {
+        alert('Please log in to BookShow.');
+       }
+    };
+
 
     useEffect(() => {
       const axi = async () => {
@@ -91,7 +106,8 @@ return(
             </abbr>
             </span>
             
-             <span id="sp">{cart.length}</span>
+            <span id="sp">{isAuthenticated ? cart.length : 0}</span>
+
              
        </div>
 
@@ -134,7 +150,11 @@ return(
                         <p>{movie.overview}</p>
                         <p>Release Date {movie.release_date}</p>
            
-                        <Link to="/BookSeat">  <button >BookShow</button> </Link> 
+    {
+      (isAuthenticated) ? <Link to="/BookSeat">  <button >BookShow</button> </Link> : 
+      <button onClick={handleseat}>BookShow</button>
+
+     }
                         <button  onClick={() => handleCart(movie)} id='cartBtn'>Add to Favourite</button>
                    </div>
               

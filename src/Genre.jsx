@@ -19,14 +19,28 @@ const Genre = () => {
 
   const handleCart = (movie) => {
     if (isAuthenticated) {
-      if (cart.includes(movie)) {
+      if (cart.some((m) => m.id === movie.id)) {
         alert("This movie is already added to your favorites.");
       } else {
-        setCart([...cart, movie]);
-        console.log(cart);
+        const newCart = [...cart, movie];
+        setCart(newCart);
+        localStorage.setItem("cart", JSON.stringify(newCart));
       }
     } else {
       alert("Please log in to add movies to your favorites.");
+    }
+  };
+
+  const handleseat = () => {
+    if (isAuthenticated) 
+    {
+      
+      <Link to="/BookSeat">  <button >BookShow</button> </Link>
+        
+      }
+     else
+     {
+      alert("Please log in to BookShow.");
     }
   };
 
@@ -123,7 +137,7 @@ const Genre = () => {
   <button value="Western" onClick={handleButtonClick}>Western</button>
 </div>
 
-   <div id="hide" >  <AddToCart />   </div>      
+   <div id="hide" >  <AddToCart  />   </div>      
 
 
    <div className="allMovieList"> 
@@ -167,7 +181,11 @@ const Genre = () => {
                      <p>IMDBID = {movie.imdbID}</p> 
                      <p>Release Year {movie.Year}</p>
         
-                     <Link to="/BookSeat">  <button >BookShow</button> </Link> 
+                     {
+      (isAuthenticated) ? <Link to="/BookSeat">  <button >BookShow</button> </Link> : 
+      <button onClick={handleseat}>BookShow</button>
+
+     }
                      <button  onClick={() => handleCart(movie)} id='cartBtn'>Add to Favourite</button>
                 </div>
            

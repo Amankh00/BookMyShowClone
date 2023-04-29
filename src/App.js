@@ -1,5 +1,3 @@
-
-
 import Moviecart from './Moviecart';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import SeatReservation from './SeatReservation';

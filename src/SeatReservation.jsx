@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import './SeatReservation.css';
 import { Link } from 'react-router-dom';
+import { useAuth0 ,} from "@auth0/auth0-react";
+import Moviecart from './Moviecart';
+
 
 
 const SeatReservation = () => {
+
+  const { isAuthenticated } = useAuth0();
+ 
   const [seats, setSeats] = useState([
     { id: 1, price: 10, isBooked: false },
     { id: 2, price: 10, isBooked: false },
@@ -40,7 +46,6 @@ const SeatReservation = () => {
     { id: 33, price: 20, isBooked: false },
   
   ]);
-
 
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -102,9 +107,7 @@ const SeatReservation = () => {
         }
         return seatClass;
       };
-    
-
-
+  
     return(
        <>
      
@@ -146,6 +149,9 @@ const SeatReservation = () => {
       </div>
     </>
     )
-    }
-
+          
+   }
+  
+   
+  
     export default SeatReservation;
